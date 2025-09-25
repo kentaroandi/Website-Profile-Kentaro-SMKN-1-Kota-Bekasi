@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktik Tabel HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse; /* hilangkan jarak antar border */
+            margin: 20px auto;
+        }
+        caption {
+            caption-side: top;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Daftar Siswa</caption>
+        <tr>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Kelas</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Indah</td>
+            <td>16</td>
+            <td>11 RPL</td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td>12 TKJ</td>
+        </tr>
+        <tr>
+            <td>Budi</td>
+            <td colspan="2">12 TKJ & 11 RPL</td>
+        </tr>
+        <tr>
+            <td>Citra</td>
+            <td>15</td>
+            <td>10 MM</td>
+        </tr>
+    </table>
+</body>
+</html>
