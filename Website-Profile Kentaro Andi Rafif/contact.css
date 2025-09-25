@@ -1,0 +1,302 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("background.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contact Section */
+.contact-section {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* Contact Box */
+.contact-box {
+  position: relative;
+  background: rgba(0,0,0,0.75);
+  padding: 28px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+
+  /* Fade In */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.9s ease forwards;
+
+  /* Border dasar */
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 12px rgba(255,255,255,0.1);
+  transition: box-shadow 0.5s ease, border 0.5s ease;
+}
+
+/* Glow putih saat hover box */
+.contact-box:hover {
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 0 25px rgba(255,255,255,0.7);
+}
+
+/* Animasi fadeInUp */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.contact-box h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;                 /* supaya semua rata */
+  padding: 12px 14px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  transition: 0.3s;
+  display: block;              /* biar rapi 1 baris penuh */
+  box-sizing: border-box;      /* padding masuk hitungan */
+}
+
+/* Focus input */
+.form-group input:focus,
+.form-group textarea:focus {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+
+/* Email khusus */
+.email-group input {
+  background: rgba(255,255,255,0.25);
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Textarea */
+.form-group textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #00b894;
+  color: #fff;
+  transition: 0.3s;
+}
+button:hover {
+  background: #019874;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,255,200,0.5);
+}
+button:active {
+  transform: scale(0.92);
+  background: #007f63;
+}
+
+
+/* Tooltip */
+.side-icons .tooltip {
+  position: absolute;
+  right: 120%;
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  opacity: 0;
+  white-space: nowrap;
+  transform: translateX(10px);
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+.side-icons .icon:hover .tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("background.png") no-repeat center center/cover;
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+form h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #00c897;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: #00e6a7;
+  transform: scale(1.05);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;   /* biar ada jarak dari form */
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #000;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+.side-icons {
+  position: fixed;
+  right: 16px;              /* jarak dari tepi kanan */
+  top: 50%;                 /* posisikan ke tengah vertikal */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;                /* jarak antar ikon */
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);   /* hitam transparan */
+  border-radius: 9999px;    /* kapsul/bulat */
+  backdrop-filter: saturate(1.1);   /* opsional */
+  -webkit-backdrop-filter: saturate(1.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  z-index: 9999;            /* pastikan di atas konten lain */
+}
+
+.side-icons .icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  transition: transform 160ms ease, filter 160ms ease, opacity 160ms ease;
+  opacity: 0.95;
+}
+
+.side-icons .icon:hover {
+  transform: scale(1.06);
+  opacity: 1;
+  filter: brightness(1.1);
+}
+
+.side-icons .icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.side-icons .icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  transition: transform 180ms ease, filter 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+  opacity: 0.95;
+  cursor: pointer;
+}
+.side-icons .icon:hover {
+  transform: scale(1.15);
+  opacity: 1;
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px rgba(255,255,255,0.4);
+}
+
+/* Klik efek (pressed) */
+.side-icons .icon:active {
+  transform: scale(0.9);
+  filter: brightness(0.9);
+  box-shadow: 0 0 4px rgba(255,255,255,0.2) inset;
+}
+
+/* Icon image style */
+.side-icons .icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+  pointer-events: none; /* biar klik tetap ke <a> */
+}
+
+
+#status {
+  margin-top: 12px;
+  font-size: 0.9rem;
+}

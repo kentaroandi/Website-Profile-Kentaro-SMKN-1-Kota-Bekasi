@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kentaro Andi Rafif - Portfolio</title>
+
+  <link rel="stylesheet" href="achievment.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <section id="home" class="home-section">
+    <h1>My Achievements</h1>
+    <p>Welcome to the showcase of Kentaro Andi Rafif achievements in sports and writing throughout the years.</p>
+    <a href="#achievement" class="btn-home">Lihat Achievements ↓</a>
+  </section>
+
+  <section id="achievement" class="achievement-section">
+    <h1 class="fade-in-scroll">My Achievements</h1>
+
+    <div class="achievement-card fade-in-scroll">
+      <img src="Guru.jpg" alt="Award 1">
+      <div class="achievement-text">
+        <h2>Best Athlete Martial Arts (Junior HighSchool)</h2>
+        <p>Became National Best Athlete in 2023 in Paku Bumi, SukaBumi</p>
+      </div>
+    </div>
+
+    <div class="achievement-card fade-in-scroll">
+      <img src="coba.jpg" alt="Award 2">
+      <div class="achievement-text">
+        <h2>#1, The Champion on Fight National Jakarta</h2>
+        <p>Win in 2024 National South Jakarta, Fight Category (Junior HighSchool)</p>
+      </div>
+    </div>
+
+    <div class="achievement-card fade-in-scroll">
+      <img src="ayang.jpg" alt="Award 3">
+      <div class="achievement-text">
+        <h2>#1, First Place National Fight Bandung</h2>
+        <p>National Champion in 2024 Bandung, Fight Category (Junior Highschool)</p>
+      </div>
+    </div>
+
+    <div class="achievement-card fade-in-scroll">
+      <img src="test3.jpg" alt="Award 4">
+      <div class="achievement-text">
+        <h2>#3, International Fight Third Place</h2>
+        <p>Fight in Malaysia 2023 Shah Alam city</p>
+      </div>
+    </div>
+
+    <div class="achievement-card fade-in-scroll">
+      <img src="yaya.jpg" alt="Award 5">
+      <div class="achievement-text">
+        <h2>Best Writer (One Day to Write)</h2>
+        <p>In Elementary School Province Competition in 2018</p>
+      </div>
+    </div>
+
+ <aside class="side-icons" aria-label="Tautan cepat">
+    <a href="https://www.instagram.com/kentaro_andi/" class="icon" aria-label="Instagram">
+      <img src="1.png" alt="Instagram">
+      <span class="tooltip">Instagram</span>
+    </a>
+    <a href="#" class="icon" aria-label="Game">
+      <img src="2.png" alt="Game">
+      <span class="tooltip">Discord</span>
+    </a>
+    <a href="#" class="icon" aria-label="Twitch">
+      <img src="3.png" alt="Twitch">
+      <span class="tooltip">Whatsapp</span>
+    </a>
+  </aside>
+
+<script>
+  const cards = document.querySelectorAll('.achievement-card');
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+  
+      cards.forEach(c => {
+        if (c !== card) c.classList.remove('active');
+      });
+
+      card.classList.toggle('active');
+    });
+  });
+</script>
+
+
+    <a href="index.html" class="btn-back">Back to Home</a>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll('.fade-in-scroll');
+    window.addEventListener('scroll', () => {
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
